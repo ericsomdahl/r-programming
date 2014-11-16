@@ -35,6 +35,7 @@ complete <- function(directory, id = 1:332) {
     df <- rbind(df, l_ob_values[[i]])
   }
   
+  #reindex so that we are consecutive. allocating the initial dataframe caused a skip
   rownames(df) <- 1:nrow(df)
   df
 }
