@@ -28,7 +28,7 @@ rankhospital <- function(state, outcome, num = "best") {
   ##order by the result, discarding NA values
   order.outcome <- order(pa_temp[outcomeColName], pa_temp$Hospital.Name, decreasing = FALSE, na.last = NA)
   
-  nth <- getNthRow(nrow(pa_temp), num)
+  nth <- getNthRow(length(order.outcome), num)
   if (is.na(nth)) {
     return(nth)
   }
