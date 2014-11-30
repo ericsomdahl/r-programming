@@ -24,7 +24,7 @@ best <- function(state, outcome) {
   ##specified outcome
   t1 <- pa[[1]][outcomeColName] == min(pa[[1]][outcomeColName], na.rm = TRUE)
   
-  ##grab the row produced by the filter
+  ##grab the row(s) produced by the filter
   result <- pa[[1]][which(t1),]
   result$Hospital.Name
 }
