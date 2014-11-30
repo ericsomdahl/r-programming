@@ -29,10 +29,10 @@ rankall <- function(outcome, num = "best") {
     nth <- getNthRow(length(order.outcome), num)
     if (is.na(nth) == FALSE) {
       temp_result <- df_state[ order.outcome[nth], ]
-      df_temp_state = data.frame(State=state, Hospital.Name=temp_result$Hospital.Name, stringsAsFactors=FALSE)
+      df_temp_state = data.frame(state=state, hospital=temp_result$Hospital.Name, stringsAsFactors=FALSE)
     }
     else {
-      df_temp_state = data.frame(State=state, Hospital.Name=NA, stringsAsFactors=FALSE)
+      df_temp_state = data.frame(state=state, hospital=NA, stringsAsFactors=FALSE)
     }
     
     if (is.na(df_val)) {
